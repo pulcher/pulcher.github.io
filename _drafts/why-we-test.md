@@ -73,18 +73,44 @@ sub-standard (crappy) code, I can _improve_ the code and know that I have made t
 a better place.
 
 ### Because you need to know fragile(crappy) your code is
-talk code maintainablily and fagility and design problems
+Although writing tests can sometimes take more time and effort than just code only.  If the 
+method you are trying to test is that hard, then you may want to take another at the current 
+implementation of the object.
 
 ### Better written code
+Except for the simplest of problems, writing tests and coding to the test will result in 
+better written code.  After a good Red, Green, Re-factor session, I can look at my code and 
+ask "Who wrote this?  Cuz, there is no way I turned out something this elegant!"  I know 
+the _elegant_ is a relative term.
 
 ### Speed is just test away
-talk to not having to go back and check things, see the confidence thing.
+If you are not worrying about "What you broke" or "Where is it breaking now", how much more 
+can you get accomplished during the day?  Writing good tests go a long way into making the 
+previous statements a reality.  
+
+![Bugs on the wall](/assets/why-we-test/bugs-on-the-wall.png)
 
 ### Because you sleep
-Well most people do,  are developers really people?
+I know every developer has a mind like a steel trap.  Nothing is ever forgotten and recall 
+is instant.  This is all possible because developers are not real people.  Not only sleeping, 
+but weekends are a constant problem.  Leaving myself a busted test to start with on Monday 
+morning is working out really well.  If it takes 30 minutes on Monday to remember what you 
+were doing on Friday, just imagine how long it will take after 1, 2, or 6 months?
 
 # So when should you write a test?
-explain my selection criteria.  use david as an example.
+The usual answer is "all the time".  However, that is not very realistic.  The real answer is 
+somewhere between "nothing" and "everything".  The holy grail being "100%" 
+test coverage.  As awesome as total coverage can be, the value of that level 
+of testing usually diminishes greatly somewhere after the 80% to 90% mark.  Just because you 
+have tests does not mean have quality code.
+
+> ...Test coverage is a useful tool for finding untested parts of a codebase. Test coverage is of little use as a numeric statement of how good your tests are.
+> ![coverage != quality](/assets/why-we-test/coverage-not-quality.png)
+> 
+> \- [Martin Fowler](http://martinfowler.com/bliki/TestCoverage.html)
+
+So if the only reason you are writing tests is to meet a metric, you probably should stop and 
+go do something productive.
 
 ### For every bug
 If there is a bug identified in production code, it gets a test.  One of the most expensive 
