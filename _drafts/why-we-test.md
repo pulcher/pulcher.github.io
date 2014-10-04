@@ -116,7 +116,7 @@ go do something productive.
 If there is a bug identified in production code, it gets a test.  One of the most expensive 
 operation in the development cycle than to fix a bug that made it all the way to production.  
 
-\<put in graph of e here with axises of y - cost, x - location in the cycle\>
+![Cost of bugs](/assets/why-we-test/bug-fix-costs.jpg)
 
 Some may ask what the real cost is to fix a production bug.  That is a good question, and the 
 answer to that is the standard consultant reply _It depends_.  By the time you get to production, 
@@ -128,8 +128,7 @@ there are so many in play than just _fixing a minor bug_.
 * Restarting of the deployment cycle
 * etc...
 
-I would say just trying to figure out that cost in some situations just isn't worth the effort.  
-So the faster you can identify and correct a bug, the better.
+Bottom line, the faster you can identify and correct a bug, the better.
 
 ### Edge cases
 talk to PEX through crazy stuff at the object.
@@ -145,3 +144,4 @@ talk to tests for pass throughs and other non-sense
 
 * <http://en.wikipedia.org/wiki/Unit_testing>
 * [Uncle Bob Martin Quote](http://www.agiledata.org/essays/tdd.html)
+* Bug cost image belongs to [Alister Scott](http://watirmelon.com/2013/05/17/fixing-bugs-in-production-is-it-that-expensive-any-more/)
