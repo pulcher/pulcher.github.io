@@ -131,14 +131,33 @@ there are so many in play than just _fixing a minor bug_.
 Bottom line, the faster you can identify and correct a bug, the better.
 
 ### Edge cases
-talk to PEX through crazy stuff at the object.
+There are tools like [Pex](http://research.microsoft.com/en-us/projects/pex/) that will generate 
+test cases that will exercise every bit of your code.  Go run it sometime and check the results.  
+Pex does a really good job of figuring out insane input.  
+
+Unless test count is a metric, I usually write on _interesting_ tests.  Those interesting tests 
+are the _edge_ cases.  For example:
+
+* objects that are null and should never be
+* Off-by-1 errors
+* Failed external to the class calls
+* etc...
 
 ### Complicated features
+Many times the story in play is straight forward and the implementation is straight forward.  
+When that isn't the case, my best play has always been to right the tests first.  This is 
+essentially the _Design_ part of the Fowlers quote.  By writing the tests based on the requirements,
+ the tests then put you on a path to a coding solution.  I look at a lot of code written with 
+ TDD and thought to myself "I would've have never written the method that way, or that efficiently."
 
 ### To prove to yourself how things really work.
-
+It is pretty much a given that you should never _test the framework_, unless you are the one
+ writing it. However, I occasionally write tests so that I am sure I understand some aspect 
+ of the framework that I want to understand better.  Taking the time to write those test has 
+ solidified more than a few questions on how a particular framework behaves.
+ 
 ### Because someone told you you had to.
-talk to tests for pass throughs and other non-sense
+Unfortunately, sometimes you just have to write tests whether they have real value.  
 
 # Links used in this series
 
