@@ -20,7 +20,7 @@ Get Windows 10 IoT core on a medium that is capable of booting a raspberry pi 2.
 * An account with the [Windows Embedded Pre-Release Program](https://connect.microsoft.com/windowsembeddedIoT)
 * The most recent image for the Rasberry Pi from the downloads on the site above.
 * A USB SD card reader.
-* Install the hardware development tools specifically the [ADK](https://msdn.microsoft.com/en-us/library/windows/hardware/dn757539%28v=vs.85%29.aspx). 
+* Install the hardware development tools specifically the [ADK](http://go.microsoft.com/fwlink/p/?LinkId=526740). 
 For more on the [Hardware Dev Kits](https://msdn.microsoft.com/en-US/windows/hardware/dn913721(v=vs8.5).aspx#winADK)
 
 ## Problem
