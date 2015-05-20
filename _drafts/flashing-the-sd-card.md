@@ -49,19 +49,27 @@ seems like a good place to start.
 # Ok get on with it, how do I do this
 
 1. Insert the SD card in to the USB card reader, and insert that into an available port.
-2. Make a copy of the Flash.ffu file to someplace easy to get to ie "c:\windows\tmp"
+2. Make a copy of the Flash.ffu file to someplace easy to get to ie "c:\Users\<your username>\Desktop"
 3. Open an administrator command prompt and issue the following commands:
-* diskpart
-* list disk
-* exit
-here are the results from mine executing of those statements:
-<insert the cmd result here>
-In this case my SD card is disk 2.  The '2' being really important.
-* now execute the dism command.  This is a bit more difficult than it seems.  You need to find the 
-right 'dism' to execute.  My was locted here: <insert path to dism>
+	
+	__diskpart__<br />
+	__list disk__<br />
+	__exit__
+    
+	In this case my SD card is disk 1.  The '1' being really important.
 
-If you are successfull then you screen should look someting like this:
-<insert completed screen>
+4. Now execute the __dism__ command.  This is a bit more difficult than it seems.  You need to find the 
+right 'dism' to execute.  
+    
+	This is the reason for the __ADK__ requirement, as this __dism__ knows how to write
+to the SD card.  
+
+    My was locted here: 
+	
+	C:\Program Files (x86)\Windows Kits\10\Assessment and Deployment Kit\Deployment Tools\x86\DISM\dism.exe
+
+If you are successfull then you screen should look something like this:
+![Full Install](/assets/windows-iot/full-sd-run.png)
 
 All that is left todo is eject the SD card and insert it into the raspberry pi 2.  
 
