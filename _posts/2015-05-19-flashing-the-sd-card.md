@@ -3,7 +3,6 @@ layout: post
 category : Talks
 tagline: ""
 tags : [windows 10, IoT, available talks]
-comments: false
 ---
 {% include JB/setup %}
 
