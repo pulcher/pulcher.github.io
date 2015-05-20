@@ -6,7 +6,7 @@ tags : [windows 10, IoT, available talks]
 ---
 {% include JB/setup %}
 
-# How to flash you SD card without dedicated Windows 10
+# How to flash you SD card without a dedicated Windows 10 machine
 
 ## Goal
 
