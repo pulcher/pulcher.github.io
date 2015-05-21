@@ -47,6 +47,8 @@ seems like a good place to start.
 
 # Ok get on with it, how do I do this
 
+_Update: this works on Windows 8.1 as well_
+
 1. Insert the SD card in to the USB card reader, and insert that into an available port.
 2. Make a copy of the Flash.ffu file to someplace easy to get to ie "c:\Users\<your username>\Desktop"
 3. Open an administrator command prompt and issue the following commands:
