@@ -13,8 +13,8 @@ tags: [talk schedule]
 # Past Talks
 
 ## Houston TechFest
-Topic: Welcome to the Windows IoT World
-Slides: [Keynote](/assets/slides/houston-techfest-iot-talk.key), [Power point](/assets/slides/houston-techfest-iot-talk.pptx)
+* Topic: Welcome to the Windows IoT World
+* Slides: [Keynote](/assets/slides/houston-techfest-iot-talk.key), [Power point](/assets/slides/houston-techfest-iot-talk.pptx)
 
 ## North Dallas Cloud
 
