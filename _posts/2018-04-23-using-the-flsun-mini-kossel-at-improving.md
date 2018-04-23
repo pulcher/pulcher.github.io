@@ -20,6 +20,8 @@ tags : [3D Printing, gcode, delta, FLSUN]
 
 After installation you will need to configure Cura to slice the models correctly.  
 
+### Configure the machine profile 
+
 1. Goto Preferences > Settings and check the __Check all__ box.  This will may overwhelm you, but it will be ok.
 1. Goto Printers, Click Add.
 1. Select Other > Kossel Mini.  Give it a name if you like, then click __Add Printer__
@@ -55,4 +57,9 @@ After installation you will need to configure Cura to slice the models correctly
     G90 ;absolute positioning
 
 1. Click Close, and Close again
-1. 
+
+Now you should have the printer profile set correctly.
+
+### Configure the material profile
+
+Currently 
