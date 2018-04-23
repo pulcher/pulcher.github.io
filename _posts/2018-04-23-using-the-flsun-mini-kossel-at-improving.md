@@ -62,4 +62,41 @@ Now you should have the printer profile set correctly.
 
 ### Configure the material profile
 
-Currently 
+I normally run either PLA or PETG in this printer.  If you would like to run something else or a different color, contact me and we will work that out.
+
+Currently PETG is loaded and here are the __Custom__ setting that need updated:
+
+	adhesion_type = skirt
+	cool_fan_enabled = False
+	cool_min_layer_time = 10
+	default_material_print_temperature = 245
+	infill_pattern = lines
+	infill_sparse_density = 15
+	layer_height = 0.2
+	line_width = 0.42
+	material_bed_temperature = 70
+	material_bed_temperature_layer_0 = 75
+	material_diameter = 1.69
+	material_final_print_temperature = 240
+	material_flow = 93
+	material_initial_print_temperature = 245
+	material_print_temperature = 245
+	retraction_amount = 2.4
+	retraction_extra_prime_amount = 0.064
+	retraction_combing = noskin
+	retraction_hop = 0.4
+	retraction_hop_enabled = True
+	retraction_hop_only_when_collides = True
+	retraction_speed = 15
+	skirt_gap = 2
+	skirt_line_count = 8
+	speed_print = 30
+	speed_layer_0 = 15.0
+	speed_topbottom = 15.0
+	speed_travel = 140
+	support_infill_rate = 20
+	top_bottom_thickness = 0.8
+	wall_thickness = 1.2
+
+I will update these when I change the filament.
+
