@@ -28,6 +28,7 @@ After installation you will need to configure Cura to slice the models correctly
 ![Printer](/assets/flsun/printer-settings.png)
 ![Extruder](/assets/flsun/extruder-settings.png)
 1. Use the following for the __Start__ and __End__ gcode:
+~~~
     Start Gcode:
     G21 ;metric values
     G92 E0 ;zero the extruded length
@@ -52,6 +53,7 @@ After installation you will need to configure Cura to slice the models correctly
     G28
     M84 ;steppers off
     G90 ;absolute positioning
+~~~
 
 1. Click Close, and Close again
 1. 
