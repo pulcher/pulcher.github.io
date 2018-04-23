@@ -28,31 +28,30 @@ After installation you will need to configure Cura to slice the models correctly
 ![Printer](/assets/flsun/printer-settings.png)
 ![Extruder](/assets/flsun/extruder-settings.png)
 1. Use the following for the __Start__ and __End__ gcode:
-```
-Start Gcode:
-G21 ;metric values
-G92 E0 ;zero the extruded length
-G90 ;absolute positioning
-M82 ;set extruder to absolute mode
-M107 ;start with the fan off
-M117 Homing...
-G28 ;Home all axes (max endstops)
-G29 ; Auto-bed leveling
-M117 Auto-Level Activation...
-G1 F200 E10 ;extrude 3mm of feed stock
-G92 E0 ;zero the extruded length again
-G1 F9000
-M117 Printing...
+    Start Gcode:
+    G21 ;metric values
+    G92 E0 ;zero the extruded length
+    G90 ;absolute positioning
+    M82 ;set extruder to absolute mode
+    M107 ;start with the fan off
+    M117 Homing...
+    G28 ;Home all axes (max endstops)
+    G29 ; Auto-bed leveling
+    M117 Auto-Level Activation...
+    G1 F200 E10 ;extrude 3mm of feed stock
+    G92 E0 ;zero the extruded length again
+    G1 F9000
+    M117 Printing...
+    
+    End Gcode:
+    M104 S0 ;extruder heater off
+    M140 S0 ;heated bed heater off (if you have it)
+    G91 ;relative positioning
+    G1 F300 E-10  ;retract the filament a bit before lifting the nozzle, to release some of the pressure
+    G92 E0;
+    G28
+    M84 ;steppers off
+    G90 ;absolute positioning
 
-End Gcode:
-M104 S0 ;extruder heater off
-M140 S0 ;heated bed heater off (if you have it)
-G91 ;relative positioning
-G1 F300 E-10  ;retract the filament a bit before lifting the nozzle, to release some of the pressure
-G92 E0;
-G28
-M84 ;steppers off
-G90 ;absolute positioning
-```
 1. Click Close, and Close again
 1. 
