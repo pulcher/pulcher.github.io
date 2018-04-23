@@ -100,3 +100,23 @@ Currently PETG is loaded and here are the __Custom__ setting that need updated:
 
 I will update these when I change the filament.
 
+### Prepare your model for printing
+
+1. Load your model into Cura
+1. Run through the __layers__ and make sure you are happy with the result.
+1. Save your gcode to and SD card
+
+### Start the printer
+
+* If the printer isn't on,  push the red button to turn it on.
+![Red Button](/assests/flsun/WP_20180419_21_43_38_Pro.jpg)
+* This screen is the __Information Screen__ and is all the information you will be getting during your print:
+![Information Screen](/assests/flsun/WP_20180419_21_36_24_Pro.jpg)
+The __Silver Knob__ can be rotated and click.  The __reset button__ underneither is your friend.  If something goes wrong or you think something is going wrong, push it.  It will immediately stop all activity.
+
+Since we have PETG loaded you must do the following after every reset/power on of the printer:
+1. Click the knob and go to the __Control__ menu:
+![Control Menu](/assests/flsun/WP_20180419_21_36_33_Pro.jpg)
+
+
+
