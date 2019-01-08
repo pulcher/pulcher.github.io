@@ -1,6 +1,6 @@
 ---
 layout: page
-title: samples
+title: videos
 tagline:
 tags: [samples]
 ---
