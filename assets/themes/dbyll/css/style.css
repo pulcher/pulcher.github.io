@@ -68,6 +68,7 @@ article .share .twitter:hover {
 #contact-list li:hover .fa-rss {
   color: #e74c3c;
 }
+#contact-list li:hover .fa-facebook,
 article .share .facebook:hover {
   color: #43609C;
   border-color: #43609C;
