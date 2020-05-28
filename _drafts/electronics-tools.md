@@ -28,4 +28,24 @@ tags : [basic electronics, tools, getting started]
 
 # Tools you may want to get sooner than later
 
+## Soldering Iron
+
+## Fume Extractor
+
+## Helping Hands
+
+## Desolder tool
+
+## Solder cleaner
+
+## Solder
+
 # What you don't need just starting out
+
+## Oscillascope
+
+## Logic Analyzer
+
+## Hot Air Rework station
+
+## 

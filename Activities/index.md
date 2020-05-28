@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: page
 category : Activities
 tagline: "Activities past, present, and future."
 tags : [skill building, unboxing, demonstrate]
@@ -7,7 +7,7 @@ tags : [skill building, unboxing, demonstrate]
 {% include JB/setup %}
 
 # Current Activities
-## 
+## Working with Resistors
 
 # Proposed projects
 ## Understanding the bread board.
