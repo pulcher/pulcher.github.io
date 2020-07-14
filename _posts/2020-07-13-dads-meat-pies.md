@@ -38,6 +38,8 @@ others would have a hard time eating even a single pie.
 * 1/4 Cup All-Purpose Flour
 * Some Extra Virgin Olive Oil(EVOO) so you don't start with a dry pan.
 
+![Prep done](/assets/cooking/DadsMeatPies/20200712_145128.jpg)
+
 Mix the beef and pork together. Sometimes I feed the mixture into the grinder, so that the pork and beef are throughly mixed.
 
 In a large skillet over medium high heat, drizzle in a 1 Tbsp of EVOO.  When the oil is shimmering add the meant.
