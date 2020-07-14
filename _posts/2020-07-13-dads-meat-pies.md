@@ -8,6 +8,7 @@ comments: false
 {% include JB/setup %}
 
 # Dad's Louisiana Meat Pies
+![](/assets/cooking/DadsMeatPies/20200712_202216.jpg)
 
 I remember the first time that Dad(or any of my family) had a __Natchitoches Meat Pie__.  It was 
 during the [Nachitoches Christmas Festival of Lights](http://www.christmasfestival.com/). Not sure of the year, but it was the weekend of all the parades during the day.  While wondering around 
