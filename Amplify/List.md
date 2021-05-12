@@ -18,6 +18,7 @@
 # slack
 - Radicubs
 - random
+- THatSlack
 
 # Twitch
 - whisper to my subscriber and followers.
