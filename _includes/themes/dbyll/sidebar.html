@@ -30,6 +30,13 @@
 			</a>
 		</li>
 		{% endif %}
+		{% if site.author.twitch %}
+		<li>
+			<a class="btn btn-default btn-sm" href="https://twitch.tv/{{ site.author.twitch }}">
+				<i class="fa fa-twitter fa-lg"></i>
+			</a>
+		</li>
+		{% endif %}
 		{% if site.author.email %}
 		<li>
 			<a class="btn btn-default btn-sm" href="mailto:{{ site.author.email }}">
