@@ -1,6 +1,84 @@
----
-theme :
-  name : dbyll
----
-{% include JB/setup %}
-{% include themes/dbyll/default.html %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta name="author" content="{{ site.author.name }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link href="/assets/themes/dbyll/resources/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <link href="/assets/themes/dbyll/resources/syntax/syntax.css" rel="stylesheet">
+  <link href="/assets/site.css" rel="stylesheet">
+  <link href="{{ site.JB.atom_path }}" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+  <link href="{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+  <style>
+    :root {
+      --color-anchor: {{ site.brand.palette.anchor }};
+      --color-cyan: {{ site.brand.palette.cyan }};
+      --color-lime: {{ site.brand.palette.lime }};
+      --color-magenta: {{ site.brand.palette.magenta }};
+      --color-ink: {{ site.brand.palette.ink }};
+      --color-paper: {{ site.brand.palette.paper }};
+      --color-steel: {{ site.brand.palette.steel }};
+    }
+  </style>
+</head>
+<body class="{% if page.page_class %}{{ page.page_class }}{% else %}standard-page{% endif %}">
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <div class="site-shell">
+    <header class="site-header">
+      <div class="brand-lockup">
+        <a class="brand-mark" href="/" aria-label="{{ site.title }} home">
+          {% if site.brand.logo_path %}
+          <img src="{{ site.brand.logo_path }}" alt="{{ site.title }} logo">
+          {% else %}
+          <span>HP</span>
+          {% endif %}
+        </a>
+        <div class="brand-copy">
+          <p class="brand-eyebrow">{{ site.brand.eyebrow }}</p>
+          <a class="brand-name" href="/">{{ site.title }}</a>
+          <p class="brand-tagline">{{ site.tagline }}</p>
+        </div>
+      </div>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+        <ul>
+          {% for item in site.navigation %}
+          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </header>
+
+    <main class="site-main" id="main-content">
+      {{ content }}
+    </main>
+
+    <footer class="site-footer">
+      <div>
+        <p class="footer-title">Still learning, still making a mess.</p>
+        <p>{{ site.author.bio }}</p>
+      </div>
+      <div class="footer-links">
+        {% for link in site.social_links %}
+          {% if link.url %}
+          <a href="{{ link.url }}" aria-label="{{ link.label }}">
+            {% if link.icon %}<i class="fa {{ link.icon }}" aria-hidden="true"></i>{% endif %}
+            <span>{{ link.label }}</span>
+          </a>
+          {% endif %}
+        {% endfor %}
+      </div>
+    </footer>
+  </div>
+
+  <script src="/assets/site.js"></script>
+  {% include JB/analytics %}
+</body>
+</html>

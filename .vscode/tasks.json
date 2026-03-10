@@ -1,0 +1,22 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Jekyll Preview",
+			"type": "shell",
+			"command": "C:\\Ruby32-x64\\bin\\bundle.bat",
+			"args": [
+				"exec",
+				"jekyll",
+				"serve",
+				"--host",
+				"127.0.0.1",
+				"--port",
+				"4000",
+				"--livereload"
+			],
+			"isBackground": true,
+			"group": "build"
+		}
+	]
+}

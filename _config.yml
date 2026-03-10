@@ -11,8 +11,9 @@ markdown: kramdown
 # Themes are encouraged to use these universal variables
 # so be sure to set them if your theme uses them.
 #
-title : Harold Garage
-tagline: Learning everyday
+title : Harold Pulcher
+tagline: Make stuff. Break stuff. Learn stuff.
+description : Veteran maker, developer, speaker, and professional tinkerer.
 author :
   name : Harold Pulcher
   email : pulcher@pulcher.biz
@@ -24,7 +25,7 @@ author :
   facebook : pulcher
   twitch : haroldpulcher
   feedburner : feedname
-  bio: A Microsoft MVP, co-ambassador for Hackster.io, developer, maker, magician, woodworker, and part time grease monkey. He has over 30 years of experience working in Information Technology. During that time he has done everything from running network cable, setting up various companies infrastructure from the absolute bare metal, and building line of business software for many of those companies. As passionate as he is about technology, you might happen to see him checking his air reserve while at a depth of 60 feet, cooking up a mean ""free-range"" fruit cake, doing pre-show table magic at the improv, or making a nice piece of wood into a lot of sawdust so my wife will have potting bench for her plants.  Use the link below to find on Twitter, Twitch, Facebook, and Youtube
+  bio: I have spent decades building systems, breaking systems, and learning from both. These days that usually means code, electronics, talks, shop projects, and whatever strange problem looks fun enough to drag onto the workbench.
 
 # The production_url is only used when full-domain names are needed
 # such as sitemap.txt
@@ -35,6 +36,141 @@ author :
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
 production_url : http://pulcher.biz
+
+brand:
+  eyebrow: "Harold Pulcher's junk drawer"
+  hero_title: "Make stuff. Break stuff. Learn stuff."
+  hero_intro: "Veteran developer, maker, speaker, and garage-floor problem solver. The homepage is the top drawer of the bench: current channels, current projects, and the good stuff worth reaching for first."
+  voice: "Seasoned, curious, playful, and practical."
+  logo_path: "/assets/twitch logo purple-white-background.png"
+  motto_path: "/assets/Make Stuff Break Stuff - Cut out.png"
+  lore_path: "/assets/last_lore_supper.png"
+  mascot_path: "/assets/squirrel of distraction.png"
+  palette:
+    anchor: "#8D5AAD"
+    cyan: "#4FA8DD"
+    lime: "#B4D234"
+    magenta: "#E535A4"
+    ink: "#171717"
+    paper: "#F4EDE3"
+    steel: "#5D6570"
+    ember: "#C77A1C"
+    soot: "#2A1B12"
+    oak: "#6E4324"
+navigation:
+  - title: Home
+    url: /
+  - title: About
+    url: /About
+  - title: Projects
+    url: /Projects
+  - title: Talks
+    url: /Talks
+  - title: Old Stuff
+    url: /old/
+legacy_navigation:
+  - title: Archive
+    url: /archive.html
+  - title: Categories
+    url: /categories.html
+  - title: Tags
+    url: /tags.html
+  - title: Activities
+    url: /Activities
+social_links:
+  - id: twitch
+    label: Twitch
+    handle: haroldpulcher
+    url: https://www.twitch.tv/haroldpulcher
+    action: Watch live
+    blurb: Streams, experiments, demos, and the occasional well-earned chaos.
+    accent: cyan
+    icon: fa-twitch
+  - id: youtube
+    label: YouTube
+    handle: HaroldPulcher
+    url: https://www.youtube.com/c/HaroldPulcher
+    action: Watch builds
+    blurb: Videos, explainers, project walkthroughs, and the longer-form bench stories.
+    accent: magenta
+    icon: fa-youtube-play
+  - id: store
+    label: Store
+    handle: example-store
+    url: https://example.com/store
+    action: Browse the shelf
+    blurb: Ready for merch, plans, kits, or whatever winds up getting sold out of the drawer.
+    accent: lime
+    icon: fa-shopping-cart
+  - id: instagram
+    label: Instagram
+    handle: example-gram
+    url: https://example.com/instagram
+    action: View snapshots
+    blurb: Fast shop photos, bench snapshots, and proof that the mess is productive.
+    accent: cyan
+    icon: fa-instagram
+  - id: tiktok
+    label: TikTok
+    handle: example-toks
+    url: https://example.com/tiktok
+    action: Watch quick clips
+    blurb: Short-form chaos, quick tips, and whatever deserves a faster camera roll.
+    accent: magenta
+    icon: fa-video-camera
+  - id: linkedin
+    label: LinkedIn
+    handle: harold-pulcher-microsoft-mvp
+    url: https://www.linkedin.com/in/harold-pulcher-microsoft-mvp
+    action: See the resume
+    blurb: "The straight-faced version of the story: credentials, experience, and professional history."
+    accent: anchor
+    icon: fa-linkedin
+  - id: discord
+    label: Discord
+    handle: bench-chat
+    url: https://example.com/discord
+    action: Join the bench chat
+    blurb: A good place for questions, live build chatter, or a shop-floor back channel.
+    accent: steel
+    icon: fa-comments
+  - id: github
+    label: GitHub
+    handle: pulcher
+    url: https://github.com/pulcher
+    action: Read the code
+    blurb: Code, experiments, half-finished ideas, and the occasional useful thing.
+    accent: steel
+    icon: fa-github
+  - id: facebook
+    label: Facebook
+    handle: pulcher
+    url: https://www.facebook.com/pulcher
+    action: Follow along
+    blurb: Community posts, updates, and the broader social orbit.
+    accent: anchor
+    icon: fa-facebook
+  - id: x
+    label: X / Twitter
+    handle: haroldpulcher
+    url: https://twitter.com/haroldpulcher
+    action: Catch quick thoughts
+    blurb: Quick hits, links, announcements, and short bursts from the bench.
+    accent: magenta
+    icon: fa-twitter
+featured_destinations:
+  - title: Projects
+    url: /Projects
+    description: Current builds, future trouble, and the things already covered in sawdust.
+  - title: Talks
+    url: /Talks
+    description: Upcoming appearances and the long trail of places I have already been talking shop.
+  - title: About
+    url: /About
+    description: The longer story, from Radio Shack weekends to a career built by fixing what needed fixing.
+  - title: Old Stuff
+    url: /old/
+    description: Recipes, archived posts, tags, categories, and the rest of the interesting leftovers.
 
 # All Jekyll-Bootstrap specific configurations are namespaced into this hash
 #

@@ -1,0 +1,156 @@
+---
+layout: default
+---
+{% include JB/setup %}
+
+<section class="hero-panel">
+  <div class="hero-copy">
+    <p class="hero-eyebrow">{{ site.brand.eyebrow }}</p>
+    <h1>{{ site.brand.hero_title }}</h1>
+    <p class="hero-intro">{{ site.brand.hero_intro }}</p>
+    {% if site.brand.motto_path %}
+    <div class="hero-motto-strip">
+      <img src="{{ site.brand.motto_path }}" alt="Make stuff, break stuff, learn stuff motto graphic" class="hero-motto-image">
+    </div>
+    {% endif %}
+    <div class="hero-chips" aria-label="Site motto">
+      <span class="chip chip-cyan">Make</span>
+      <span class="chip chip-magenta">Break</span>
+      <span class="chip chip-lime">Learn</span>
+    </div>
+    <div class="hero-actions">
+      <a class="action-link action-link-primary" href="#junk-drawer">Open the drawer</a>
+      <a class="action-link" href="/old/">See the old stuff</a>
+    </div>
+  </div>
+
+  <aside class="hero-badge" aria-label="Brand mark">
+    {% if site.brand.mascot_path %}
+    <div class="hero-mascot-card">
+      <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="hero-mascot-image">
+    </div>
+    {% endif %}
+    <div class="hero-badge-core">
+      {% if site.brand.logo_path %}
+      <img src="{{ site.brand.logo_path }}" alt="{{ site.title }} logo" class="hero-logo-image">
+      {% else %}
+      HP
+      {% endif %}
+    </div>
+    <div class="hero-badge-ring hero-badge-ring-cyan">Maker bench</div>
+    <div class="hero-badge-ring hero-badge-ring-magenta">Useful chaos</div>
+    <div class="hero-badge-ring hero-badge-ring-lime">Always learning</div>
+  </aside>
+</section>
+
+{% if site.brand.lore_path %}
+<section class="lore-panel">
+  <div class="section-heading">
+    <p class="section-kicker">Shop mythology</p>
+    <h2>The whole bench runs better with a little lore baked into it.</h2>
+    <p class="section-tagline">This is the mood board now: candlelight, clutter, weird companions, and a lot of experience sitting around one table.</p>
+  </div>
+
+  <div class="lore-grid">
+    <figure class="lore-frame">
+      <img src="{{ site.brand.lore_path }}" alt="Last Lore Supper artwork" class="lore-image">
+    </figure>
+    <div class="lore-copy">
+      <h3>Part garage, part tavern, part problem lab.</h3>
+      <p>The new artwork pushes the site toward a warmer, stranger, more lived-in world. That fits better than a plain portfolio layout for someone who has spent decades learning by tearing into things.</p>
+      <p>The logo and motto still do the bright signaling, but now they sit inside a bench full of smoke, wood, metal, stories, and one inevitable squirrel-level distraction.</p>
+    </div>
+  </div>
+</section>
+{% endif %}
+
+<section class="dashboard-panel" id="junk-drawer">
+  <div class="section-heading">
+    <p class="section-kicker">Junk drawer dashboard</p>
+    <h2>Pick a drawer and see what falls out.</h2>
+    <p class="section-tagline">Social links should feel like labeled compartments on a bench, not a row of tiny buttons.</p>
+  </div>
+
+  <div class="drawer-board" data-drawer-board>
+    <div class="drawer-tabs" role="tablist" aria-label="Social destinations">
+      {% for link in site.social_links %}
+      <button
+        class="drawer-tab drawer-tab-{{ link.accent }}{% if forloop.first %} is-active{% endif %}"
+        type="button"
+        role="tab"
+        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+        aria-controls="drawer-{{ link.id }}"
+        data-drawer-target="drawer-{{ link.id }}">
+        <span class="drawer-tab-label">{{ link.label }}</span>
+        <span class="drawer-tab-handle">{{ link.handle }}</span>
+      </button>
+      {% endfor %}
+    </div>
+
+    <div class="drawer-panels">
+      {% if site.brand.mascot_path %}
+      <aside class="drawer-mascot">
+        <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="drawer-mascot-image">
+        <p class="drawer-mascot-label">Squirrel of distraction</p>
+      </aside>
+      {% endif %}
+      {% for link in site.social_links %}
+      <article class="drawer-panel drawer-panel-{{ link.accent }}{% if forloop.first %} is-active{% endif %}" id="drawer-{{ link.id }}" role="tabpanel">
+        <p class="drawer-eyebrow">{{ link.label }}</p>
+        <h3>{{ link.action }}</h3>
+        <p class="drawer-copy">{{ link.blurb }}</p>
+        <p class="drawer-handle">{{ link.handle }}</p>
+        {% if link.url %}
+        <a class="action-link action-link-primary" href="{{ link.url }}">{{ link.action }}</a>
+        {% else %}
+        <span class="action-link action-link-disabled">{{ link.action }}</span>
+        <p class="drawer-note">Drop this URL into _config.yml when you are ready.</p>
+        {% endif %}
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<section class="destination-panel">
+  <div class="section-heading">
+    <p class="section-kicker">Bench map</p>
+    <h2>Grab the paths worth touching first.</h2>
+  </div>
+
+  <div class="card-grid">
+    {% for destination in site.featured_destinations %}
+    <a class="info-card" href="{{ destination.url }}">
+      <h3>{{ destination.title }}</h3>
+      <p>{{ destination.description }}</p>
+    </a>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="post-panel">
+  <div class="section-heading">
+    <p class="section-kicker">Fresh shavings</p>
+    <h2>Recent notes from the bench.</h2>
+  </div>
+
+  <div class="card-grid">
+    {% for post in site.posts limit:3 %}
+    <article class="post-card">
+      <p class="post-card-date">{{ post.date | date: "%b %d, %Y" }}</p>
+      <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+      <p>{{ post.excerpt | strip_html | strip_newlines | truncate: 180 }}</p>
+      <a class="text-link" href="{{ post.url }}">Read the note</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="archive-callout">
+  <div>
+    <p class="section-kicker">Old stuff</p>
+    <h2>The recipes, archives, tags, and older experiments are still here.</h2>
+    <p>They are just no longer parked on the front bumper.</p>
+  </div>
+  <a class="action-link action-link-primary" href="/old/">Open the archive path</a>
+</section>

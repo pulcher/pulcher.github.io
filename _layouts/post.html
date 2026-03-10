@@ -2,4 +2,71 @@
 layout: default
 ---
 {% include JB/setup %}
-{% include themes/dbyll/post.html %}
+<article class="content-page post-page">
+	<header class="section-heading post-heading">
+		<p class="section-kicker">From the archive drawer</p>
+		<h1>{{ page.title }}</h1>
+		{% if page.tagline %}
+		<p class="section-tagline">{{ page.tagline }}</p>
+		{% endif %}
+		<p class="post-meta">{{ page.date | date: "%B %d, %Y" }}</p>
+	</header>
+
+	<div class="rich-content">
+		{{ content }}
+	</div>
+
+	{% unless page.categories == empty %}
+	<section class="meta-block">
+		<h2>Categories</h2>
+		<ul class="meta-list">
+			{% assign categories_list = page.categories %}
+			{% if categories_list.first[0] == null %}
+				{% for category in categories_list %}
+				<li><a href="{{ site.JB.categories_path }}#{{ category }}-ref">{{ category | join: "/" }}</a></li>
+				{% endfor %}
+			{% else %}
+				{% for category in categories_list %}
+				<li><a href="{{ site.JB.categories_path }}#{{ category[0] }}-ref">{{ category[0] | join: "/" }}</a></li>
+				{% endfor %}
+			{% endif %}
+			{% assign categories_list = nil %}
+		</ul>
+	</section>
+	{% endunless %}
+
+	{% unless page.tags == empty %}
+	<section class="meta-block">
+		<h2>Tags</h2>
+		<ul class="meta-list">
+			{% assign tags_list = page.tags %}
+			{% if tags_list.first[0] == null %}
+				{% for tag in tags_list %}
+				<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}</a></li>
+				{% endfor %}
+			{% else %}
+				{% for tag in tags_list %}
+				<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}</a></li>
+				{% endfor %}
+			{% endif %}
+			{% assign tags_list = nil %}
+		</ul>
+	</section>
+	{% endunless %}
+
+	<nav class="post-pager" aria-label="Post navigation">
+		{% if page.previous %}
+		<a class="pager-link" href="{{ page.previous.url }}">&larr; {{ page.previous.title }}</a>
+		{% else %}
+		<span class="pager-link is-disabled">&larr; Older post</span>
+		{% endif %}
+
+		{% if page.next %}
+		<a class="pager-link" href="{{ page.next.url }}">{{ page.next.title }} &rarr;</a>
+		{% else %}
+		<span class="pager-link is-disabled">Newer post &rarr;</span>
+		{% endif %}
+	</nav>
+
+	{% include JB/comments %}
+</article>

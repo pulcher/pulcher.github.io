@@ -1,0 +1,28 @@
+---
+layout: page
+title: Legacy Home Template
+tagline: The previous front page, kept for reference and nostalgia.
+page_class: old-page
+---
+{% include JB/setup %}
+
+<p>This is the previous homepage template, kept here so none of the old presentation work is lost while the new landing page takes over the front door.</p>
+
+{% for post in paginator.posts %}
+{% if post.hidden != true %}
+<article class="post-card">
+  <p class="post-card-date">{{ post.date | date: "%B %d, %Y" }}</p>
+  <h3><a href="{{ BASE_PATH }}{{ post.url }}">{{ post.title }}</a></h3>
+
+  <div>
+    {% if post.fullview %}
+    {{ post.content }}
+    {% else %}
+    <a class="text-link" href="{{ BASE_PATH }}{{ post.url }}">
+      {% if post.shortinfo %}{{ post.shortinfo }}{% elsif post.description %}{{ post.description }}{% else %}{{ post.excerpt }}{% endif %}
+    </a>
+    {% endif %}
+  </div>
+</article>
+{% endif %}
+{% endfor %}
