@@ -47,16 +47,16 @@ brand:
   lore_path: "/assets/last_lore_supper.png"
   mascot_path: "/assets/squirrel of distraction.png"
   palette:
-    anchor: "#8D5AAD"
-    cyan: "#4FA8DD"
-    lime: "#B4D234"
-    magenta: "#E535A4"
-    ink: "#171717"
-    paper: "#F4EDE3"
-    steel: "#5D6570"
-    ember: "#C77A1C"
-    soot: "#2A1B12"
-    oak: "#6E4324"
+    anchor: "#CE91C9"
+    cyan: "#5E9FEF"
+    lime: "#F5626F"
+    magenta: "#F56499"
+    ink: "#232626"
+    paper: "#EFE5F6"
+    steel: "#444746"
+    ember: "#FAA292"
+    soot: "#2F3231"
+    oak: "#6266F7"
 navigation:
   - title: Home
     url: /
@@ -96,24 +96,24 @@ social_links:
     icon: fa-youtube-play
   - id: store
     label: Store
-    handle: example-store
-    url: https://example.com/store
+    handle: Where the fun stuff lives.
+    url: https://store.pulcher.biz
     action: Browse the shelf
     blurb: Ready for merch, plans, kits, or whatever winds up getting sold out of the drawer.
     accent: lime
     icon: fa-shopping-cart
   - id: instagram
     label: Instagram
-    handle: example-gram
-    url: https://example.com/instagram
+    handle: haroldpulcher
+    url: https://www.instagram.com/haroldpulcher
     action: View snapshots
     blurb: Fast shop photos, bench snapshots, and proof that the mess is productive.
     accent: cyan
     icon: fa-instagram
   - id: tiktok
     label: TikTok
-    handle: example-toks
-    url: https://example.com/tiktok
+    handle: haroldpulcher
+    url: https://www.tiktok.com/@haroldpulcher
     action: Watch quick clips
     blurb: Short-form chaos, quick tips, and whatever deserves a faster camera roll.
     accent: magenta
@@ -128,8 +128,8 @@ social_links:
     icon: fa-linkedin
   - id: discord
     label: Discord
-    handle: bench-chat
-    url: https://example.com/discord
+    handle: pulcher
+    url: https://discord.gg/pulcher
     action: Join the bench chat
     blurb: A good place for questions, live build chatter, or a shop-floor back channel.
     accent: steel
