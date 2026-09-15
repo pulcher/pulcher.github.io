@@ -23,11 +23,11 @@ layout: default
 			{% assign categories_list = page.categories %}
 			{% if categories_list.first[0] == null %}
 				{% for category in categories_list %}
-				<li><a href="{{ site.JB.categories_path }}#{{ category }}-ref">{{ category | join: "/" }}</a></li>
+				<li><a href="{{ site.JB.categories_path }}#{{ category | slugify }}-ref">{{ category | join: "/" }}</a></li>
 				{% endfor %}
 			{% else %}
 				{% for category in categories_list %}
-				<li><a href="{{ site.JB.categories_path }}#{{ category[0] }}-ref">{{ category[0] | join: "/" }}</a></li>
+				<li><a href="{{ site.JB.categories_path }}#{{ category[0] | slugify }}-ref">{{ category[0] | join: "/" }}</a></li>
 				{% endfor %}
 			{% endif %}
 			{% assign categories_list = nil %}
@@ -42,11 +42,11 @@ layout: default
 			{% assign tags_list = page.tags %}
 			{% if tags_list.first[0] == null %}
 				{% for tag in tags_list %}
-				<li><a href="{{ site.JB.tags_path }}#{{ tag }}-ref">{{ tag }}</a></li>
+				<li><a href="{{ site.JB.tags_path }}#{{ tag | slugify }}-ref">{{ tag }}</a></li>
 				{% endfor %}
 			{% else %}
 				{% for tag in tags_list %}
-				<li><a href="{{ site.JB.tags_path }}#{{ tag[0] }}-ref">{{ tag[0] }}</a></li>
+				<li><a href="{{ site.JB.tags_path }}#{{ tag[0] | slugify }}-ref">{{ tag[0] }}</a></li>
 				{% endfor %}
 			{% endif %}
 			{% assign tags_list = nil %}

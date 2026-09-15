@@ -6,6 +6,13 @@
   <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
   <meta name="description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
   <meta name="author" content="{{ site.author.name }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:description" content="{% if page.description %}{{ page.description }}{% else %}{{ site.description }}{% endif %}">
+  <meta property="og:type" content="{% if page.layout == 'post' %}article{% else %}website{% endif %}">
+  <meta property="og:url" content="{{ site.production_url }}{{ page.url }}">
+  {% if site.brand.logo_path %}<meta property="og:image" content="{{ site.production_url }}{{ site.brand.logo_path }}">{% endif %}
+  <meta name="twitter:card" content="summary">
+  {% if site.author.twitter %}<meta name="twitter:site" content="@{{ site.author.twitter }}">{% endif %}
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:wght@400;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
@@ -16,13 +23,8 @@
   <link href="{{ site.JB.rss_path }}" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
   <style>
     :root {
-      --color-anchor: {{ site.brand.palette.anchor }};
-      --color-cyan: {{ site.brand.palette.cyan }};
-      --color-lime: {{ site.brand.palette.lime }};
-      --color-magenta: {{ site.brand.palette.magenta }};
-      --color-ink: {{ site.brand.palette.ink }};
-      --color-paper: {{ site.brand.palette.paper }};
-      --color-steel: {{ site.brand.palette.steel }};
+      {% for color in site.brand.palette %}--color-{{ color[0] }}: {{ color[1] }};
+      {% endfor %}
     }
   </style>
 </head>
@@ -33,7 +35,7 @@
       <div class="brand-lockup">
         <a class="brand-mark" href="/" aria-label="{{ site.title }} home">
           {% if site.brand.logo_path %}
-          <img src="{{ site.brand.logo_path }}" alt="{{ site.title }} logo">
+          <img src="{{ site.brand.logo_path }}" alt="{{ site.title }} logo" width="4167" height="4167">
           {% else %}
           <span>HP</span>
           {% endif %}
@@ -50,7 +52,9 @@
       <nav class="site-nav" id="site-nav" aria-label="Main navigation">
         <ul>
           {% for item in site.navigation %}
-          <li><a href="{{ item.url }}">{{ item.title }}</a></li>
+          {% assign nav_path = item.url | remove: '/' %}
+          {% assign current_path = page.url | remove: '/' %}
+          <li><a href="{{ item.url }}"{% if nav_path == current_path %} class="is-active" aria-current="page"{% endif %}>{{ item.title }}</a></li>
           {% endfor %}
         </ul>
       </nav>

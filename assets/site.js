@@ -11,7 +11,7 @@
   }
 
   if (drawerBoard) {
-    var tabs = drawerBoard.querySelectorAll('[data-drawer-target]');
+    var tabs = Array.prototype.slice.call(drawerBoard.querySelectorAll('[data-drawer-target]'));
     var panels = drawerBoard.querySelectorAll('.drawer-panel');
 
     var activatePanel = function (targetId) {
@@ -26,9 +26,29 @@
       });
     };
 
-    tabs.forEach(function (tab) {
+    tabs.forEach(function (tab, index) {
       tab.addEventListener('click', function () {
         activatePanel(tab.getAttribute('data-drawer-target'));
+      });
+
+      tab.addEventListener('keydown', function (event) {
+        var nextIndex = null;
+
+        if (event.key === 'ArrowRight' || event.key === 'ArrowDown') {
+          nextIndex = (index + 1) % tabs.length;
+        } else if (event.key === 'ArrowLeft' || event.key === 'ArrowUp') {
+          nextIndex = (index - 1 + tabs.length) % tabs.length;
+        } else if (event.key === 'Home') {
+          nextIndex = 0;
+        } else if (event.key === 'End') {
+          nextIndex = tabs.length - 1;
+        }
+
+        if (nextIndex !== null) {
+          event.preventDefault();
+          tabs[nextIndex].focus();
+          activatePanel(tabs[nextIndex].getAttribute('data-drawer-target'));
+        }
       });
     });
   }

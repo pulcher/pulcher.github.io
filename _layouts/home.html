@@ -8,11 +8,6 @@ layout: default
     <p class="hero-eyebrow">{{ site.brand.eyebrow }}</p>
     <h1>{{ site.brand.hero_title }}</h1>
     <p class="hero-intro">{{ site.brand.hero_intro }}</p>
-    {% if site.brand.motto_path %}
-    <div class="hero-motto-strip">
-      <img src="{{ site.brand.motto_path }}" alt="Make stuff, break stuff, learn stuff motto graphic" class="hero-motto-image">
-    </div>
-    {% endif %}
     <div class="hero-chips" aria-label="Site motto">
       <span class="chip chip-cyan">Make</span>
       <span class="chip chip-magenta">Break</span>
@@ -25,21 +20,18 @@ layout: default
   </div>
 
   <aside class="hero-badge" aria-label="Brand mark">
-    {% if site.brand.mascot_path %}
-    <div class="hero-mascot-card">
-      <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="hero-mascot-image">
-    </div>
-    {% endif %}
     <div class="hero-badge-core">
       {% if site.brand.logo_path %}
-      <img src="{{ site.brand.logo_path }}" alt="{{ site.title }} logo" class="hero-logo-image">
+      <img src="{{ site.brand.logo_path }}" alt="{{ site.title }} logo" class="hero-logo-image" width="4167" height="4167">
       {% else %}
       HP
       {% endif %}
     </div>
-    <div class="hero-badge-ring hero-badge-ring-cyan">Maker bench</div>
-    <div class="hero-badge-ring hero-badge-ring-magenta">Useful chaos</div>
-    <div class="hero-badge-ring hero-badge-ring-lime">Always learning</div>
+    <div class="hero-badge-labels">
+      <span class="hero-badge-label hero-badge-label-cyan">Maker bench</span>
+      <span class="hero-badge-label hero-badge-label-magenta">Useful chaos</span>
+      <span class="hero-badge-label hero-badge-label-lime">Always learning</span>
+    </div>
   </aside>
 </section>
 
@@ -53,7 +45,7 @@ layout: default
 
   <div class="lore-grid">
     <figure class="lore-frame">
-      <img src="{{ site.brand.lore_path }}" alt="Last Lore Supper artwork" class="lore-image">
+      <img src="{{ site.brand.lore_path }}" alt="Last Lore Supper artwork" class="lore-image" width="1536" height="1024" loading="lazy">
     </figure>
     <div class="lore-copy">
       <h3>Part garage, part tavern, part problem lab.</h3>
@@ -78,6 +70,7 @@ layout: default
         class="drawer-tab drawer-tab-{{ link.accent }}{% if forloop.first %} is-active{% endif %}"
         type="button"
         role="tab"
+        id="tab-{{ link.id }}"
         aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
         aria-controls="drawer-{{ link.id }}"
         data-drawer-target="drawer-{{ link.id }}">
@@ -90,12 +83,12 @@ layout: default
     <div class="drawer-panels">
       {% if site.brand.mascot_path %}
       <aside class="drawer-mascot">
-        <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="drawer-mascot-image">
+        <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="drawer-mascot-image" width="1024" height="1536" loading="lazy">
         <p class="drawer-mascot-label">Squirrel of distraction</p>
       </aside>
       {% endif %}
       {% for link in site.social_links %}
-      <article class="drawer-panel drawer-panel-{{ link.accent }}{% if forloop.first %} is-active{% endif %}" id="drawer-{{ link.id }}" role="tabpanel">
+      <article class="drawer-panel drawer-panel-{{ link.accent }}{% if forloop.first %} is-active{% endif %}" id="drawer-{{ link.id }}" role="tabpanel" aria-labelledby="tab-{{ link.id }}" tabindex="0">
         <p class="drawer-eyebrow">{{ link.label }}</p>
         <h3>{{ link.action }}</h3>
         <p class="drawer-copy">{{ link.blurb }}</p>

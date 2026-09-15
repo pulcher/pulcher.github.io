@@ -24,7 +24,6 @@ author :
   linkedin: harold-pulcher-microsoft-mvp
   facebook : pulcher
   twitch : haroldpulcher
-  feedburner : feedname
   bio: I have spent decades building systems, breaking systems, and learning from both. These days that usually means code, electronics, talks, shop projects, and whatever strange problem looks fun enough to drag onto the workbench.
 
 # The production_url is only used when full-domain names are needed
@@ -35,7 +34,7 @@ author :
 # Else if you are pushing to username.github.io, replace with your username.
 # Finally if you are pushing to a GitHub project page, include the project name at the end.
 #
-production_url : http://pulcher.biz
+production_url : https://pulcher.biz
 
 brand:
   eyebrow: "Harold Pulcher's junk drawer"
@@ -47,9 +46,9 @@ brand:
   lore_path: "/assets/last_lore_supper.png"
   mascot_path: "/assets/squirrel of distraction.png"
   palette:
-    anchor: "#CE91C9"
+    anchor: "#8D5AAD"
     cyan: "#5E9FEF"
-    lime: "#F5626F"
+    lime: "#B4D234"
     magenta: "#F56499"
     ink: "#232626"
     paper: "#EFE5F6"
@@ -228,34 +227,13 @@ JB :
     provider : disqus
     disqus :
       short_name : pulcherbiz
-    livefyre :
-      site_id : 123
-    intensedebate :
-      account : 123abc
-    facebook :
-      appid : 123
-      num_posts: 5
-      width: 580
-      colorscheme: light
 
   # Settings for analytics helper
   # Set 'provider' to the analytics provider you want to use.
   # Set 'provider' to false to turn analytics off globally.
   #
   analytics :
-    provider : google
-    google :
-        tracking_id : 'UA-***'
-    googleUA :
-        tracking_id : 'UA-***'
-        property_name : 'PROPERTY NAME'
-    getclicky :
-      site_id : 
-    mixpanel :
-        token : '_MIXPANEL_TOKEN_'
-    piwik :
-        baseURL : 'myserver.tld/piwik' # Piwik installation address (without protocol)
-        idsite : '1'                   # the id of the site on Piwik
+    provider : false
 
   # Settings for sharing helper.
   # Sharing is for things like tweet, plusone, like, reddit buttons etc.

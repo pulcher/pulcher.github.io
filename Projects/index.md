@@ -1,15 +1,16 @@
 ---
-layout: post
-category : Projects
+layout: page
+title: Projects
 tagline: "Projects past, present, and future."
-tags : [interesting, found coolness]
 ---
-{% include JB/setup %}
 
-# Current projects
-## Robot Overlord
+## Current projects
 
-# Proposed projects
-## OBS Scene changer
+### Robot Overlord
 
-# Past projects
+## Proposed projects
+
+### OBS Scene changer
+
+## Past projects
+
