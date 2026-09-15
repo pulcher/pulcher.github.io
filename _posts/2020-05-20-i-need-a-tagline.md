@@ -1,6 +1,7 @@
 ---
 layout: post
 category : social media
+redirect_from: /social media/2020/05/20/i-need-a-tagline
 tagline: "I need some help...."
 tags : [YouTube, Twitch, self improvement, 3 questions, goals]
 ---

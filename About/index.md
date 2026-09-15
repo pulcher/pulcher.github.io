@@ -5,7 +5,7 @@ tagline:
 ---
 {% include JB/setup %}
 
-![Alt Look at that water!](/assets/pulcher-inside.png)
+![Alt Look at that water!](/assets/pulcher-inside.webp)
 
 The first real computer I tried to program was a TRS-80.  I became a fixture at the local
 Radio Shack, where every Saturday I would ride my bike to downtown Longview, Texas loaded 

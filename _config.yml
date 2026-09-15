@@ -1,6 +1,9 @@
 # This is the default format.
 # For more see: http://jekyllrb.com/docs/permalinks/
-permalink: /:categories/:year/:month/:day/:title
+permalink: /:slugified_categories/:year/:month/:day/:title
+
+plugins:
+  - jekyll-redirect-from
 
 exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
 highlighter: rouge
@@ -42,9 +45,8 @@ brand:
   hero_intro: "Veteran developer, maker, speaker, and garage-floor problem solver. The homepage is the top drawer of the bench: current channels, current projects, and the good stuff worth reaching for first."
   voice: "Seasoned, curious, playful, and practical."
   logo_path: "/assets/twitch logo purple-white-background.png"
-  motto_path: "/assets/Make Stuff Break Stuff - Cut out.png"
-  lore_path: "/assets/last_lore_supper.png"
-  mascot_path: "/assets/squirrel of distraction.png"
+  lore_path: "/assets/last_lore_supper.webp"
+  mascot_path: "/assets/squirrel of distraction.webp"
   palette:
     anchor: "#8D5AAD"
     cyan: "#5E9FEF"

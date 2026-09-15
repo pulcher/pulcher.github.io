@@ -1,6 +1,7 @@
 ---
 layout: post
 category : 3D Printing
+redirect_from: /3d printing/2018/04/23/using-the-flsun-mini-kossel-at-improving
 tagline: ""
 tags : [3D Printing, gcode, delta, FLSUN]
 ---

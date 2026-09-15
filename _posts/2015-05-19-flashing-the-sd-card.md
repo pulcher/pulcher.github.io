@@ -1,6 +1,7 @@
 ---
 layout: post
 category : Talks
+redirect_from: /Talks/2015/05/19/flashing-the-sd-card
 tagline: ""
 tags : [windows 10, IoT, available talks]
 ---
