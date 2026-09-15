@@ -57,51 +57,44 @@ layout: default
 {% endif %}
 
 <section class="dashboard-panel" id="junk-drawer">
-  <div class="section-heading">
-    <p class="section-kicker">Junk drawer dashboard</p>
-    <h2>Pick a drawer and see what falls out.</h2>
-    <p class="section-tagline">Social links should feel like labeled compartments on a bench, not a row of tiny buttons.</p>
+  <div class="dashboard-head">
+    <div class="section-heading">
+      <p class="section-kicker">Junk drawer dashboard</p>
+      <h2>Pick a drawer and see what falls out.</h2>
+      <p class="section-tagline">Social links should feel like labeled compartments on a bench, not a row of tiny buttons.</p>
+    </div>
+    {% if site.brand.mascot_path %}
+    <aside class="drawer-mascot">
+      <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="drawer-mascot-image" width="1024" height="1536" loading="lazy">
+      <p class="drawer-mascot-label">Squirrel of distraction</p>
+    </aside>
+    {% endif %}
   </div>
 
-  <div class="drawer-board" data-drawer-board>
-    <div class="drawer-tabs" role="tablist" aria-label="Social destinations">
-      {% for link in site.social_links %}
-      <button
-        class="drawer-tab drawer-tab-{{ link.accent }}{% if forloop.first %} is-active{% endif %}"
-        type="button"
-        role="tab"
-        id="tab-{{ link.id }}"
-        aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
-        aria-controls="drawer-{{ link.id }}"
-        data-drawer-target="drawer-{{ link.id }}">
-        <span class="drawer-tab-label">{{ link.label }}</span>
-        <span class="drawer-tab-handle">{{ link.handle }}</span>
-      </button>
-      {% endfor %}
-    </div>
-
-    <div class="drawer-panels">
-      {% if site.brand.mascot_path %}
-      <aside class="drawer-mascot">
-        <img src="{{ site.brand.mascot_path }}" alt="Squirrel of distraction artwork" class="drawer-mascot-image" width="1024" height="1536" loading="lazy">
-        <p class="drawer-mascot-label">Squirrel of distraction</p>
-      </aside>
+  <div class="drawer-wall">
+    {% for link in site.social_links %}
+    {% if link.url %}
+    <a class="drawer-card drawer-card-{{ link.accent }}" href="{{ link.url }}">
+    {% else %}
+    <article class="drawer-card drawer-card-{{ link.accent }}">
+    {% endif %}
+      <span class="drawer-card-head">
+        {% if link.icon %}<i class="fa {{ link.icon }}" aria-hidden="true"></i>{% endif %}
+        <h3>{{ link.label }}</h3>
+      </span>
+      <span class="drawer-handle">{{ link.handle }}</span>
+      <p class="drawer-copy">{{ link.blurb }}</p>
+      {% if link.url %}
+      <span class="drawer-card-action">{{ link.action }} &rarr;</span>
+      {% else %}
+      <p class="drawer-note">Drop this URL into _config.yml when you are ready.</p>
       {% endif %}
-      {% for link in site.social_links %}
-      <article class="drawer-panel drawer-panel-{{ link.accent }}{% if forloop.first %} is-active{% endif %}" id="drawer-{{ link.id }}" role="tabpanel" aria-labelledby="tab-{{ link.id }}" tabindex="0">
-        <p class="drawer-eyebrow">{{ link.label }}</p>
-        <h3>{{ link.action }}</h3>
-        <p class="drawer-copy">{{ link.blurb }}</p>
-        <p class="drawer-handle">{{ link.handle }}</p>
-        {% if link.url %}
-        <a class="action-link action-link-primary" href="{{ link.url }}">{{ link.action }}</a>
-        {% else %}
-        <span class="action-link action-link-disabled">{{ link.action }}</span>
-        <p class="drawer-note">Drop this URL into _config.yml when you are ready.</p>
-        {% endif %}
-      </article>
-      {% endfor %}
-    </div>
+    {% if link.url %}
+    </a>
+    {% else %}
+    </article>
+    {% endif %}
+    {% endfor %}
   </div>
 </section>
 

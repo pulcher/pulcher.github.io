@@ -31,7 +31,6 @@ pre,
 .brand-eyebrow,
 .hero-eyebrow,
 .section-kicker,
-.drawer-tab-handle,
 .drawer-handle,
 .post-card-date,
 .post-meta,
@@ -108,8 +107,7 @@ pre,
 
 .brand-eyebrow,
 .hero-eyebrow,
-.section-kicker,
-.drawer-eyebrow {
+.section-kicker {
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 0.14em;
@@ -263,7 +261,7 @@ pre,
   font-weight: 400;
 }
 
-.drawer-panel h3,
+.drawer-card h3,
 .info-card h3,
 .post-card h3 {
   margin: 0;
@@ -326,30 +324,25 @@ pre,
 }
 
 .chip-cyan,
-.drawer-tab-cyan,
-.drawer-panel-cyan {
+.drawer-card-cyan {
   background: color-mix(in srgb, var(--color-cyan) 24%, transparent);
 }
 
 .chip-magenta,
-.drawer-tab-magenta,
-.drawer-panel-magenta {
+.drawer-card-magenta {
   background: color-mix(in srgb, var(--color-magenta) 22%, transparent);
 }
 
 .chip-lime,
-.drawer-tab-lime,
-.drawer-panel-lime {
+.drawer-card-lime {
   background: color-mix(in srgb, var(--color-lime) 30%, transparent);
 }
 
-.drawer-tab-anchor,
-.drawer-panel-anchor {
+.drawer-card-anchor {
   background: color-mix(in srgb, var(--color-anchor) 20%, transparent);
 }
 
-.drawer-tab-steel,
-.drawer-panel-steel {
+.drawer-card-steel {
   background: color-mix(in srgb, var(--color-steel) 18%, transparent);
 }
 
@@ -446,9 +439,10 @@ pre,
   background: var(--color-lime);
 }
 
-.drawer-board {
-  display: grid;
-  grid-template-columns: minmax(220px, 0.8fr) minmax(0, 1.2fr);
+.dashboard-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 1rem;
 }
 
@@ -483,19 +477,18 @@ pre,
   line-height: 1.15;
 }
 
-.drawer-tabs,
-.drawer-panels,
+.drawer-wall,
 .card-grid {
   display: grid;
   gap: 1rem;
 }
 
-.drawer-panels {
-  position: relative;
+.drawer-wall {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
 }
 
 .drawer-mascot {
-  justify-self: end;
+  flex: 0 0 auto;
   width: 8rem;
   padding: 0.45rem;
   border: 3px solid rgba(23, 23, 23, 0.14);
@@ -513,8 +506,7 @@ pre,
   letter-spacing: 0.08em;
 }
 
-.drawer-tab,
-.drawer-panel,
+.drawer-card,
 .info-card,
 .post-card {
   border: 3px solid rgba(23, 23, 23, 0.12);
@@ -522,53 +514,43 @@ pre,
   background: rgba(255, 255, 255, 0.64);
 }
 
-.drawer-tab {
-  width: 100%;
-  text-align: left;
-  padding: 1rem;
-  font: inherit;
-  cursor: pointer;
+.drawer-card {
+  display: grid;
+  gap: 0.6rem;
+  align-content: start;
+  padding: 1.25rem;
+  text-decoration: none;
   transition: transform 160ms ease, border-color 160ms ease, box-shadow 160ms ease;
 }
 
-.drawer-tab.is-active,
-.drawer-tab:hover,
-.drawer-tab:focus-visible {
-  transform: translateX(4px);
-  border-color: rgba(23, 23, 23, 0.24);
-  box-shadow: 0 12px 24px rgba(23, 23, 23, 0.12);
+a.drawer-card:hover,
+a.drawer-card:focus-visible {
+  transform: translateY(-3px);
+  border-color: rgba(23, 23, 23, 0.26);
+  box-shadow: 0 14px 26px rgba(23, 23, 23, 0.14);
 }
 
-.drawer-tab-label,
-.drawer-tab-handle,
-.drawer-handle {
-  display: block;
+.drawer-card-head {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
 }
 
-.drawer-tab-label {
+.drawer-card-head .fa {
+  font-size: 1.35rem;
+}
+
+.drawer-card-action {
   font-weight: 700;
-  font-size: 1rem;
+  color: var(--color-anchor);
 }
 
-.drawer-tab-handle,
 .drawer-handle,
 .post-card-date,
 .post-meta,
 .archive-list span {
   color: rgba(23, 23, 23, 0.62);
   font-size: 0.9rem;
-}
-
-.drawer-panel {
-  display: none;
-  align-content: start;
-  gap: 0.75rem;
-  padding: 1.5rem;
-  min-height: 100%;
-}
-
-.drawer-panel.is-active {
-  display: grid;
 }
 
 .drawer-note {
@@ -708,23 +690,8 @@ pre,
 @media (max-width: 980px) {
   .hero-panel,
   .lore-grid,
-  .drawer-board,
   .site-footer {
     grid-template-columns: 1fr;
-  }
-
-  .drawer-tabs {
-    display: flex;
-    overflow-x: auto;
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
-    scroll-snap-type: x proximity;
-  }
-
-  .drawer-tab {
-    flex: 0 0 auto;
-    min-width: 9.5rem;
-    scroll-snap-align: start;
   }
 
   .card-grid {
