@@ -21,7 +21,7 @@ author :
   github : pulcher
   twitter : haroldpulcher
   youtube : HaroldPulcher
-  linkedin: harold-pulcher-microsoft-mvp
+  linkedin: harold-pulcher
   facebook : pulcher
   twitch : haroldpulcher
   bio: I have spent decades building systems, breaking systems, and learning from both. These days that usually means code, electronics, talks, shop projects, and whatever strange problem looks fun enough to drag onto the workbench.
@@ -119,8 +119,8 @@ social_links:
     icon: fa-video-camera
   - id: linkedin
     label: LinkedIn
-    handle: harold-pulcher-microsoft-mvp
-    url: https://www.linkedin.com/in/harold-pulcher-microsoft-mvp
+    handle: harold-pulcher
+    url: https://www.linkedin.com/in/harold-pulcher
     action: See the resume
     blurb: "The straight-faced version of the story: credentials, experience, and professional history."
     accent: anchor
